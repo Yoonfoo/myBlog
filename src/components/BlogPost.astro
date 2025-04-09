@@ -1,0 +1,14 @@
+---
+const { post, customClass = "", postImageHeight = ""  } = Astro.props 
+---
+<a href={`/frontend/post/${post.id}`} class={`block bg-white rounded-3xl ${customClass}`}>
+    <div>
+        <picture>
+            <img src={post.data.image.url} alt={post.data.image.alt} class={`${postImageHeight} w-full object-cover rounded-t-3xl`} loading="lazy"/>
+        </picture>
+        <div class="m-2 ml-4 h-52">
+            <p class="text-2xl font-bold mb-4">{post.data.title}</p>
+            <p class="text-md">{post.data.description}</p>
+        </div>
+    </div>
+</a>
