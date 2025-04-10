@@ -12,7 +12,7 @@ tags: ["astro", "blogging","learning in public"]
 
 Published on: 2025-04-03
 
-Hello everyone! Welcome to my new blog, my name is Yoon Foo! Here, I will share my learning journey about every aspect of technology.
+### Hello everyone! Welcome to my new blog, my name is Yoon Foo! Here, I will share my learning journey about every aspect of technology.
 
 ## What I will share:
 
