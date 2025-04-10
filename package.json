@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/caveat": "^5.2.5",
     "@fontsource-variable/dm-sans": "^5.2.5",
     "@fontsource/kalam": "^5.2.5",
     "@fontsource/lato": "^5.2.5",

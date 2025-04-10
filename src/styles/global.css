@@ -1,6 +1,17 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+@layer utilities {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;  
+    }
+  }
+  
 @theme {
+    --font-title: 'Caveat Variable', sans-serif;
     --font-sans: 'Lato', sans-serif;
 }
