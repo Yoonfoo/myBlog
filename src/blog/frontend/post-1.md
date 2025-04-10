@@ -8,13 +8,15 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging","learning in public"]
 ---
-# My First Blog Post
+## My First Blog Post
 
 Published on: 2025-04-03
 
+![Alt text](https://docs.astro.build/assets/rose.webp 'The Astro logo on a dark background with a pink glow.')
+
 Hello everyone! Welcome to my new blog, my name is Yoon Foo! Here, I will share my learning journey about every aspect of technology.
 
-## What I will share:
+### What I will share:
 
 1. **Frontend**: First, every framework I learned about frontend development will be shared here.
 2. **Backend**: Everything about backend will go here.
