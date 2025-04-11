@@ -6,7 +6,7 @@ import BlogPost from "../components/BlogPost.astro"
 const allPosts = await getCollection("allBlog")
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Food's Tech Blog">
 	<div class="flex-grow w-5/6 m-auto">
 
 		<div class="flex flex-col pb-64">
@@ -17,13 +17,11 @@ const allPosts = await getCollection("allBlog")
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 mb-16 gap-4 xl:px-32">
 				{
 					allPosts.map((post) => (
-						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
-						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
-						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
-						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
+						<BlogPost postImageHeight="h-30 xl:h-40" post={post} url={post.id}/>
 					))
 				}
 			</div>
+			  
 		</div>
 
 	</div>

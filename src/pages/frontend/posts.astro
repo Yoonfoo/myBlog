@@ -3,7 +3,7 @@ import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import HorizontalPost from "../../components/HorizontalPost.astro"
 
-const pageTitle = "My Astro Learning Blog";
+const pageTitle = "Frontend";
 const allPosts = await getCollection("frontendBlog")
 ---
 
@@ -16,10 +16,7 @@ const allPosts = await getCollection("frontendBlog")
         <div class="pb-128 shadow-2xl py-4 rounded-b-2xl">
             {
                 allPosts.map((post) => (
-                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost post={post} url={`/frontend/posts/${post.id}`}/>
                 ))
             }
         </div>  
