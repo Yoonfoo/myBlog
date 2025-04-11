@@ -9,8 +9,21 @@ const allPosts = await getCollection("allBlog")
 <BaseLayout>
 	<div class="flex-grow w-5/6 m-auto">
 
-		<div class="grid lg:grid-cols-3 my-16 gap-2">
-			<BlogPost customClass="lg:col-span-3 md:col-span-2" postImageHeight="lg:h-96 md:h-72 h-40" post={allPosts[0]} />
+		<div class="flex flex-col pb-64">
+
+			<div class="flex md:text-3xl font-bold py-8 md:py-16 xl:p-16 xl:px-32">
+				<p>Latest Posts</p>
+			</div>
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 mb-16 gap-4 xl:px-32">
+				{
+					allPosts.map((post) => (
+						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
+						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
+						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
+						<BlogPost postImageHeight="h-30 xl:h-40" post={post} />
+					))
+				}
+			</div>
 		</div>
 
 	</div>

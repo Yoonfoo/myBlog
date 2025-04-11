@@ -1,29 +1,28 @@
 ---
 import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import BlogPost from "../../components/BlogPost.astro"
+import HorizontalPost from "../../components/HorizontalPost.astro"
 
 const pageTitle = "My Astro Learning Blog";
 const allPosts = await getCollection("frontendBlog")
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="flex-grow w-9/10 m-auto">
+    <div class="flex-grow w-9/10 m-auto pt-16 xl:px-64 pb-16">
 
-        <div class="text-2xl md:text-5xl font-extrabold flex justify-center my-10 md:my-20">
+        <div class="text-2xl md:text-5xl font-extrabold flex justify-center py-20 bg-slate-900/50 text-white rounded-t-2xl">
             <p>Frontend</p>
         </div>
-        <div class="w-full grid xl:grid-cols-3 md:grid-cols-2 gap-4 pb-32">
+        <div class="pb-128 shadow-2xl p-4 rounded-b-2xl">
             {
                 allPosts.map((post) => (
-                    <BlogPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <BlogPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <BlogPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
-                    <BlogPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
                 ))
             }
-        </div>
-            
+        </div>  
     </div>
 </BaseLayout>
 
