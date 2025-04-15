@@ -15,7 +15,7 @@ Published on: 2025-04-15
 
 ***Spiders are a vital component of the Scrapy architecture. They define the behavior for crawling websites and specify how to extract structured data from web pages. In today's article, we'll introduce Spider and LinkExtractor***
 
-![Alt text](https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 'Scrapy')
+![Alt text](https://repository-images.githubusercontent.com/529502/dab2bd00-0ed2-11eb-8588-5e10679ace4d 'Scrapy')
 
 Basically, spiders are classes that define how they perform actions when crawling a website — such as how to follow links and how to parse data from web pages. 
 
