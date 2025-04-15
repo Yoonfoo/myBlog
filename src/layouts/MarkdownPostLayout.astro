@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="flex-grow flex justify-center">
-        <div class="bg-white/70 h-full w-full md:w-2/3 p-8 flex flex-col items-center md:my-16 md:rounded-2xl">
+        <div class="bg-white/70 w-max p-8 md:p-16 md:m-16 flex flex-col items-center md:rounded-2xl">
             <slot/>
         </div>
     </div>

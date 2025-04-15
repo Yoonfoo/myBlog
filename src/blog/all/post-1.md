@@ -1,12 +1,11 @@
 ---
 title: 'Scrapy EP.1 - Architecture Overview and Project Setup'
 pubDate: 2025-04-11
-description: 'This is my Scrapy learning journey.'
+description: 'I love data, thats why I started to learn web scraping. Web scraping gives me the power to get every kind of data I want from the Internet. To learn better and share what I learn, starting today, I will begin sharing my web scraping knowledge and how I apply it in my side project.'
 author: 'Yoon Foo'
 image:
     url: 'https://repository-images.githubusercontent.com/529502/dab2bd00-0ed2-11eb-8588-5e10679ace4d'
     alt: 'Scrapy'
-filePath: '/webscraping/post'
 tags: ["python","web scraping","scrapy"]
 ---
 

@@ -1,15 +1,13 @@
 ---
-const { url, post, customClass = "", postImageHeight = ""  } = Astro.props 
+const { url, post  } = Astro.props 
 ---
-<a href={url} class={`block bg-white rounded-3xl ${customClass}`}>
-    <div>
+<a href={url} class="block bg-white rounded-3xl">
         <picture>
-            <img src={post.data.image.url} alt={post.data.image.alt} class={`${postImageHeight} w-full object-cover rounded-t-3xl`} loading="lazy"/>
+            <img src={post.data.image.url} alt={post.data.image.alt} class="h-30 xl:h-50 w-full object-cover rounded-t-3xl" loading="lazy"/>
         </picture>
-        <div class="ml-2 h-36 md:h-52 p-2 md:p-4 flex flex-col">
-            <p class="text-lg md:text-xl font-bold mb-4">{post.data.title}</p>
-            <p class="text-md md:text-lg">{post.data.description}</p>
-            <p class="text-sm hidden xl:text-md xl:pt-12 xl:inline">{post.data.pubDate.toString().slice(0,15)}</p>
+        <div class="ml-2 p-2 md:p-4 flex flex-col">
+                <h2 class="text-lg md:text-xl font-bold mb-4">{post.data.title}</h2>
+                <span class="text-md md:text-lg">{post.data.description}</span>
+                <span class="text-md xl:text-lg xl:pt-12 py-4">{post.data.pubDate.toString().slice(0,15)}</span>
         </div>
-    </div>
 </a>

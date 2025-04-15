@@ -1,7 +1,7 @@
 ---
 title: 'Scrapy EP.1 - Architecture Overview and Project Setup'
 pubDate: 2025-04-11
-description: 'This is my Scrapy learning journey.'
+description: 'As the saying goes, the most effective way to master something is by getting hands-on and building it yourself. So, for this Scrapy learning journey, I''ll be creating a web crawler that collects information on outdoor gear products (since I personally love hiking and camping!). Through this project, I''ll dive deeper into the world of web scraping and Scrapy, while also sharing the knowledge I gain along the way.'
 author: 'Yoon Foo'
 image:
     url: 'https://repository-images.githubusercontent.com/529502/dab2bd00-0ed2-11eb-8588-5e10679ace4d'
@@ -14,7 +14,7 @@ tags: ["python","web scraping","scrapy"]
 
 Published on: 2025-04-11
 
-***I love data, thats why I started to learn web scraping. Web scraping gives me the power to get every kind of data I want from the Internet. To learn better and share what I learn, starting today, I will begin sharing my web scraping knowledge and how I apply it in my side project.***
+***I love data, thats why I started to learn web scraping. Web scraping gives me the power to get every kind of data I want from the Internet. As the saying goes, the most effective way to master something is by getting hands-on and building it yourself. So, for this Scrapy learning journey, I'll be creating a web crawler that collects information on outdoor gear products (since I personally love hiking and camping!). Through this project, I'll dive deeper into the world of web scraping and Scrapy, while also sharing the knowledge I gain along the way.***
 
 ![Alt text](https://repository-images.githubusercontent.com/529502/dab2bd00-0ed2-11eb-8588-5e10679ace4d 'Scrapy: a fast high-level web crawling framework')
 

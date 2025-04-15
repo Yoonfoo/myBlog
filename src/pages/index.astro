@@ -14,10 +14,10 @@ const allPosts = await getCollection("allBlog")
 			<div class="flex md:text-4xl font-bold py-8 md:py-16 xl:p-16 xl:px-32">
 				<p>Latest Posts</p>
 			</div>
-			<div class="grid md:grid-cols-2 lg:grid-cols-3 mb-16 gap-4 xl:px-32">
+			<div class="grid md:grid-cols-2 xl:grid-cols-3 mb-16 gap-4 xl:px-32">
 				{
 					allPosts.map((post) => (
-						<BlogPost postImageHeight="h-30 xl:h-40" post={post} url={post.id}/>
+						<BlogPost post={post} url={post.id}/>
 					))
 				}
 			</div>
