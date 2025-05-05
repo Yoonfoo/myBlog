@@ -16,7 +16,7 @@ const allPosts = await getCollection("databaseBlog")
         <div class="pb-128 shadow-2xl py-4 rounded-b-2xl">
             {
                 allPosts.map((post) => (
-                    <HorizontalPost postImageHeight="h-32 md:h-34 xl:h-52" post={post} />
+                    <HorizontalPost post={post} url={`/database/posts/${post.id}`}/>
             ))
             }
         </div>
