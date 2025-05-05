@@ -26,5 +26,5 @@ export const collections = {
     backendBlog: createBlogCollection("./src/blog/backend"), 
     databaseBlog: createBlogCollection("./src/blog/database"), 
     webscrapingBlog: createBlogCollection("./src/blog/webscraping"),
-    languageBlog: createBlogCollection("./src/blog/language")
+    osBlog: createBlogCollection("./src/blog/os")
 }

@@ -35,7 +35,7 @@ go: creating new go.mod: module go-project
 
 The content in the file will looked like this:
 
-```golang
+```go
 module go-project
 go 1.24.1
 ```
@@ -80,7 +80,7 @@ $ go install github.com/gin-gonic/gin@latest
 
 Then import it in your code:
 
-```golang
+```go
 import "github.com/gin-gonic/gin"
 ```
 
