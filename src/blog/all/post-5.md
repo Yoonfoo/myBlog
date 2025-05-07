@@ -1,6 +1,6 @@
 ---
 title: "Wayland? X11? What Are They?"
-pubDate: 2025-05-06
+pubDate: 2025-05-07
 description: "I''ve been programming on Ubuntu for a while. Honestly, I know how to list files, change directories — it'’s pretty cool. But when it comes to everything happening under the hood, I'’m not that familiar. If you''re like me, let''s dive in and explore the mysteries together."
 author: "Yoon Foo"
 image:

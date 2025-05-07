@@ -3,7 +3,7 @@ import { getCollection } from "astro:content"
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from "../components/BlogPost.astro"
 
-const allPosts = await getCollection("allBlog")
+const allPosts = (await getCollection("allBlog")).sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 ---
 
 <BaseLayout pageTitle="Food's Tech Blog">

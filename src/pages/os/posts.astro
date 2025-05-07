@@ -2,9 +2,10 @@
 import { getCollection } from "astro:content"
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import HorizontalPost from "../../components/HorizontalPost.astro"
+import { z } from "astro:content";
 
 const pageTitle = "OS";
-const allPosts = await getCollection("osBlog")
+const allPosts = (await getCollection("osBlog")).sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <BaseLayout pageTitle={pageTitle}>
