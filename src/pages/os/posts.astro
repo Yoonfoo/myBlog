@@ -16,7 +16,7 @@ const allPosts = await getCollection("osBlog")
         <div class="pb-128 shadow-2xl py-4 rounded-b-2xl">
             {
                 allPosts.map((post) => (
-                    <HorizontalPost post={post} url={`/language/posts/${post.id}`}/>
+                    <HorizontalPost post={post} url={`/os/posts/${post.id}`}/>
             ))
             }
         </div>
