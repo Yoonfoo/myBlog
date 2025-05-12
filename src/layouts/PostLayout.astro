@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro"
+const { post } = Astro.props
+---
+<BaseLayout pageTitle={post.title}>
+    <div class="flex-grow flex justify-center">
+        <div class="bg-white/70 w-max p-8 md:p-16 md:m-16 flex flex-col md:rounded-2xl">
+            <slot/>
+        </div>
+    </div>
+</BaseLayout>

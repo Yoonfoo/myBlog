@@ -9,14 +9,15 @@ const { pageTitle } = Astro.props
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/prism-coldark-dark.css"/>
 		<link rel="alternate" type="application/rss+xml" title="Food's Tech Blog" href={new URL("rss.xml", Astro.site)} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body class="bg-linear-to-br from-blue-500 via-purple-400 to-indigo-600 min-h-screen flex flex-col overscroll-none">
+	<body class="bg-linear-to-br from-blue-500 via-purple-400 to-indigo-600 min-h-screen flex flex-col justify-between overscroll-none">
 		<NavBar/>
 		<slot />
 		<Footer/>

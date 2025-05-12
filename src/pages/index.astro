@@ -1,7 +1,26 @@
 ---
-import { getCollection } from "astro:content"
+import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from "../components/BlogPost.astro"
+import BlogPost from "../components/BlogPost.astro";
+import type { SanityDocument } from "@sanity/client";
+import { loadQuery } from "../sanity/lib/load-query";
+
+export async function getStaticPaths() {
+	const { data: posts } = await loadQuery<SanityDocument[]>({
+		query: `*[_type == "post"]`
+	})
+
+	return posts.map(({slug}) => {
+		return {
+			params: {
+				slug: slug.current
+			}
+		}
+	})
+}
+
+
+const { slug } = Astro.params;
 
 const allPosts = (await getCollection("allBlog")).sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 ---
