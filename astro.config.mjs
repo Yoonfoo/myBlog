@@ -20,9 +20,9 @@ export default defineConfig({
     dataset: 'blog-posts',
     useCdn: true,
     studioBasePath: '/admin',
-    stega: {
-      studioUrl: '/admin',
-    }
+    // stega: {
+      // studioUrl: '/admin',
+    // }
   }), react()],
   output: 'server',
   adapter: vercel(),
