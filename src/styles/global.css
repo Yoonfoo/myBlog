@@ -11,6 +11,12 @@
     }
   }
 
+@layer base {
+    h1 {
+        font-size: 2em;
+    }
+}
+
 @theme {
     --font-title: 'Caveat Variable', sans-serif;
     --font-sans: 'Lato', sans-serif;

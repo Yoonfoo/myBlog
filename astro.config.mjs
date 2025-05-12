@@ -18,12 +18,12 @@ export default defineConfig({
   integrations: [sanity({
     projectId: 'zexp7hco',
     dataset: 'blog-posts',
-    useCdn: true,
+    useCdn: false,
     studioBasePath: '/admin',
-    // stega: {
-      // studioUrl: '/admin',
-    // }
+    stega: {
+      studioUrl: '/admin',
+    }
   }), react()],
-  output: 'server',
-  adapter: vercel(),
+  // output: 'server',
+  // adapter: vercel(),
 });

@@ -1,11 +1,31 @@
 ---
-import { getCollection } from "astro:content"
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import HorizontalPost from "../../components/HorizontalPost.astro"
-import { z } from "astro:content";
 
 const pageTitle = "OS";
-const allPosts = (await getCollection("osBlog")).sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const POSTS_QUERY = `*[
+  _type == "post"
+  && category == $category
+  && defined(slug.current)
+]|order(publishedDate desc)[0...12]{
+  _id, 
+  title, 
+  slug, 
+  publishedDate,
+  description, 
+  mainImage {
+    asset -> { 
+      _id,
+      url
+    },
+    alt,
+  }
+}`;
+
+const posts = await sanityClient.fetch<SanityDocument[]>(POSTS_QUERY, { category: "os" });
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -16,8 +36,8 @@ const allPosts = (await getCollection("osBlog")).sort((a,b) => b.data.pubDate.ge
         </div>
         <div class="pb-128 shadow-2xl py-4 rounded-b-2xl">
             {
-                allPosts.map((post) => (
-                    <HorizontalPost post={post} url={`/os/posts/${post.id}`}/>
+                posts.map((post) => (
+                    <HorizontalPost post={post} url={`/os/posts/${post.slug.current}`}/>
             ))
             }
         </div>

@@ -1,13 +1,13 @@
 ---
-const { url, post  } = Astro.props 
+const { post } = Astro.props 
 ---
-<a href={url} class="block bg-white rounded-3xl">
+<a href={`/${post.slug.current}`} class="block bg-white rounded-3xl">
         <picture>
-            <img src={post.data.image.url} alt={post.data.image.alt} class="h-44 md:h-52 lg:h-60 w-full rounded-t-3xl" loading="lazy"/>
+            <img src={post.mainImage.asset.url} alt={post.mainImage.asset.alt} class="h-44 md:h-52 lg:h-60 w-full rounded-t-3xl" loading="lazy"/>
         </picture>
         <div class="ml-2 p-2 md:p-4 flex flex-col">
-                <h2 class="text-lg md:text-xl font-bold mb-4">{post.data.title}</h2>
-                <span class="text-md md:text-lg">{post.data.description}</span>
-                <span class="text-md xl:text-lg xl:pt-12 py-4">{post.data.pubDate.toString().slice(0,15)}</span>
+                <h1 class="font-bold mb-4">{post.title}</h1>
+                <span class="text-md md:text-lg">{post.description}</span>
+                <span class="text-md xl:text-lg xl:pt-12 py-4">{post.publishedDate}</span>
         </div>
 </a>

@@ -1,15 +1,15 @@
 ---
-const {url, post} = Astro.props 
+const { url, post } = Astro.props 
 ---
 <a href={url} class="block">
     <div class="flex p-2 md:p-4">
         <picture class="w-80 h-24 md:h-32 rounded-2xl bg-white flex justify-center items-center">
-            <img src={post.data.image.url} alt={post.data.image.alt} class="h-16 object-cover rounded-2xl" loading="lazy"/>
+            <img src={post.mainImage.asset.url} alt={post.mainImage.asset.alt} class="h-16 object-cover rounded-2xl" loading="lazy"/>
         </picture>
         <div class="w-full flex flex-col justify-evenly px-2 md:px-4">
-            <p class="text-sm md:text-2xl font-extrabold">{post.data.title}</p>
-            <p class="hidden md:inline md:text-xl">{post.data.description}</p>
-            <p class="text-xs md:text-md py-4">{post.data.pubDate.toString().slice(0,15)}</p>
+            <p class="text-sm md:text-2xl font-extrabold">{post.title}</p>
+            <p class="hidden md:inline md:text-xl">{post.description}</p>
+            <p class="text-xs md:text-md py-4">{post.publishedDate}</p>
         </div>
     </div>
 </a>

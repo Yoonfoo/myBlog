@@ -1,9 +1,9 @@
 ---
 import type { SanityDocument } from "@sanity/client";
-import { loadQuery } from "../../sanity/lib/load-query";
-import PortableText from "../../components/PortableText.astro";
-import Prose from "../../components/Prose.astro"
-import PostLayout from "../../layouts/PostLayout.astro";
+import { loadQuery } from "../../../lib/load-query";
+import PortableText from "../../../components/PortableText.astro";
+import Prose from "../../../components/Prose.astro"
+import PostLayout from "../../../layouts/PostLayout.astro";
 
 export async function getStaticPaths() {
   const { data: posts } = await loadQuery<SanityDocument[]>({
@@ -28,10 +28,10 @@ const { data: post } = await loadQuery<SanityDocument>({
 
 ---
 
-<PostLayout post={post}>
-  <Prose>    
+<PostLayout pageTitle={post.title}>
+  <Prose>
     <h1>{post.title}</h1>
-    <p>Published on: {post.publishedDate.toString().slice(0,10)}</p>
+    <p>Published on: {post.publishedDate}</p>
     <p><em><strong>{post.description}</strong></em></p>
     <PortableText portableText={post.body}/>
   </Prose>
