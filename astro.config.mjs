@@ -19,10 +19,6 @@ export default defineConfig({
     projectId: 'zexp7hco',
     dataset: 'blog-posts',
     useCdn: false,
-    studioBasePath: '/admin',
-    stega: {
-      studioUrl: '/admin',
-    }
   }), react()],
   // output: 'server',
   // adapter: vercel(),
